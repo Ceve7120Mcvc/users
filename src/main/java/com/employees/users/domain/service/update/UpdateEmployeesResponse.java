@@ -1,13 +1,14 @@
-package com.employees.users.domain.service.create;
+package com.employees.users.domain.service.update;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
-import lombok.Setter;
+import lombok.NonNull;
 
 @Getter
-@Setter
+@Builder
 @AllArgsConstructor
-public class CreateEmployeesCommand {
+public class UpdateEmployeesResponse {
     private final String name;
     private final String surnames;
     private final String curp;

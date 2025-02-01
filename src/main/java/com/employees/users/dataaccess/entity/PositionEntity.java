@@ -13,7 +13,7 @@ import lombok.*;
 public class PositionEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long idPosition;
-    String namePosition;
-    Long immediateBossKey;
+    private Long idPosition;
+    private String namePosition;
+    private Long immediateBossKey;
 }

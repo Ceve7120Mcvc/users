@@ -1,20 +1,14 @@
 package com.employees.users.dataaccess.mapper;
 
 import com.employees.users.common.domain.valueonject.AddressId;
-import com.employees.users.common.domain.valueonject.EmployeesId;
 import com.employees.users.dataaccess.entity.AddressEntity;
-import com.employees.users.dataaccess.entity.EmployeesEntity;
-import com.employees.users.dataaccess.entity.PositionEntity;
 import com.employees.users.domain.core.entity.Address;
-import com.employees.users.domain.core.entity.Employees;
-import com.employees.users.domain.core.entity.Position;
 import org.springframework.stereotype.Component;
 
 @Component
-public class AddressAccessMapper {
+public class AddressDataAccessMapper {
     public AddressEntity addressToAddressEntity(Address address){
         return AddressEntity.builder()
-                .idAddress(address.getId().getValue())
                 .street(address.getStreet())
                 .exterior(address.getExterior())
                 .interior(address.getInterior())

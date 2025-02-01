@@ -22,8 +22,12 @@ public class EmployeesCreateCommandeHandler {
     }
 
     @Transactional
-    public EmployeesCreateEvent createEmployees(CreateEmployeesCommand createEmployeesCommand) {
+    public EmployeesCreateEvent createEmployees(CreateEmployeesCommand createEmployeesCommand) throws Exception {
         Employees employees = employeesDataMapper.createEmployeesCommandToEmployees(createEmployeesCommand);
+        int validatorCurp = createEmployeesCommand.getCurp().length();
+        if (validatorCurp >= 13){
+            throw new Exception("the curp is invalid !");
+        }
         Employees savedEmployees = employeesRepository.createEmployees(employees);
         return new EmployeesCreateEvent(savedEmployees, ZonedDateTime.now(ZoneId.of("UTC")));
     }

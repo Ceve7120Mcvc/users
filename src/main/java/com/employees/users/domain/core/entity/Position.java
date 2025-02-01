@@ -19,4 +19,8 @@ public class Position extends AggregateRoot<PositionId> {
         this.namePosition = namePosition;
         this.immediateBossKey = immediateBossKey;
     }
+
+    public Position(PositionId positionId) {
+        super.setId(positionId);
+    }
 }

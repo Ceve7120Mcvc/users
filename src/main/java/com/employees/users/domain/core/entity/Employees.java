@@ -1,7 +1,5 @@
 package com.employees.users.domain.core.entity;
 
-import com.employees.users.common.domain.entity.AggregateRoot;
-import com.employees.users.common.domain.valueonject.EmployeesId;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -9,19 +7,19 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Employees extends AggregateRoot<EmployeesId> {
+public class Employees {
     private String name;
     private String surnames;
     private String curp;
-    private Long idPosition;
-    private Long idAddress;
+    private Position idPosition;
+    private Address idAddress;
 
-    public Employees(EmployeesId employeesId, String name, String surnames, String curp, Long idPosition, Long idAddress) {
-        super.setId(employeesId);
+    public Employees(String name, String surnames, String curp, Position idPosition, Address idAddress) {
         this.name = name;
         this.surnames = surnames;
         this.curp = curp;
         this.idPosition = idPosition;
         this.idAddress = idAddress;
     }
+
 }

@@ -19,8 +19,8 @@ public class EmployeesEntity {
     private String curp;
     @ManyToOne
     @JoinColumn(name="idPosition")
-    private PositionEntity idPosition;
+    private PositionEntity position;
     @ManyToOne
     @JoinColumn(name="idAddress")
-    private AddressEntity idAddress;
+    private AddressEntity address;
 }

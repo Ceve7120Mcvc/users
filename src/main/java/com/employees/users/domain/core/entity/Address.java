@@ -29,4 +29,8 @@ public class Address extends AggregateRoot<AddressId> {
         this.state = state;
         this.country = country;
     }
+
+    public Address(AddressId addressId) {
+        super.setId(addressId);
+    }
 }
