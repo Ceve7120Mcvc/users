@@ -17,6 +17,10 @@ public class EmployeesEntity {
     private String name;
     private String surnames;
     private String curp;
-    private Long idPosition;
-    private Long idAddress;
+    @ManyToOne
+    @JoinColumn(name="idPosition")
+    private PositionEntity idPosition;
+    @ManyToOne
+    @JoinColumn(name="idAddress")
+    private AddressEntity idAddress;
 }
