@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "33209ea0-d094-4136-94f7-7febaa75bfdc",
+		"name": "Prueva",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19928026",
+		"_collection_link": "https://universal-crater-253263.postman.co/workspace/examenpractica~436d051a-6d2f-4b11-8923-065b91456632/collection/19928026-33209ea0-d094-4136-94f7-7febaa75bfdc?action=share&source=collection_link&creator=19928026"
+	},
+	"item": [
+		{
+			"name": "PutEmployess",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"prueba\",\r\n    \"surnames\": \"\",\r\n    \"curp\": \"cave940415hc\",\r\n    \"idPosition\" : \"1\" ,\r\n    \"idAddress\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostAddress",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"street\": \"eudevas\",\r\n    \"exterior\":\"28\",\r\n    \"interior\":\"10\",\r\n    \"colony\":\"El caracol\",\r\n    \"municipality\":\"coyoacan\",\r\n    \"state\":\"CDMX\",\r\n    \"country\":\"Mexico\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employees/address",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostPosition",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"namePosition\" : \"Producction\",\r\n    \"inmmediateBossKey\": \"01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employees/position",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"position"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutEmployess",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"prueba\",\r\n    \"surnames\": \"\",\r\n    \"curp\": \"cave940415hc\",\r\n    \"idPosition\" : \"1\" ,\r\n    \"idAddress\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employees/:curp=cave940415hc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						":curp=cave940415hc"
+					],
+					"variable": [
+						{
+							"key": "curp=cave940415hc",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
