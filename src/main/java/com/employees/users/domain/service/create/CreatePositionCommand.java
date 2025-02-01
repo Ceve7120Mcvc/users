@@ -10,4 +10,5 @@ import lombok.Setter;
 public class CreatePositionCommand {
     private final String namePosition;
     private final Long ImmediateBossKey;
+    private final Long subordinateKey;
 }

@@ -13,11 +13,13 @@ import lombok.Setter;
 public class Position extends AggregateRoot<PositionId> {
     private String namePosition;
     private Long immediateBossKey;
+    private Long subordinateKey;
 
-    public Position(PositionId id, String namePosition, Long immediateBossKey) {
+    public Position(PositionId id, String namePosition, Long immediateBossKey, Long subordinateKey) {
         super.setId(id);
         this.namePosition = namePosition;
         this.immediateBossKey = immediateBossKey;
+        this.subordinateKey = subordinateKey;
     }
 
     public Position(PositionId positionId) {

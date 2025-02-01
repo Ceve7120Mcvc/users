@@ -23,9 +23,9 @@ public class EmployeesController {
         return ResponseEntity.ok(response);
     }
 
-    @PutMapping("/{curp}")
-    public ResponseEntity<QueryEmployeesResponse> updateOffer(@PathVariable String curp,
-                                                               @RequestBody UpdateEmployeesCommand employeesCommand){
+    @PutMapping()
+    public ResponseEntity<QueryEmployeesResponse> updateOffer(@RequestBody UpdateEmployeesCommand employeesCommand,
+                                                              @RequestHeader(value="curp") String curp){
 
         employeesCommand.setCurp(curp);
         QueryEmployeesResponse response = employeesApplicationService.updateEmployees(employeesCommand);

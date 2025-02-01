@@ -20,7 +20,8 @@ public class PositionDataAccessMapper {
         return new Position(
                 id,
                 positionEntity.getNamePosition(),
-                positionEntity.getImmediateBossKey()
+                positionEntity.getImmediateBossKey(),
+                positionEntity.getSubordinateKey()
         );
     }
 }

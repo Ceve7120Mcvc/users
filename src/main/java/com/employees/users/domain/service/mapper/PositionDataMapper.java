@@ -12,7 +12,8 @@ public class PositionDataMapper {
         return new Position(
                 null,
                 positionCommand.getNamePosition(),
-                positionCommand.getImmediateBossKey()
+                positionCommand.getImmediateBossKey(),
+                positionCommand.getSubordinateKey()
         );
     }
 

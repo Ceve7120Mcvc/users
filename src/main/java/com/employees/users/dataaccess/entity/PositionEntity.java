@@ -16,4 +16,5 @@ public class PositionEntity {
     private Long idPosition;
     private String namePosition;
     private Long immediateBossKey;
+    private Long subordinateKey;
 }
